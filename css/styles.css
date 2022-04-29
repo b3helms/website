@@ -162,3 +162,26 @@ a {
         padding-left: 0;
     }
 }
+
+
+/* Icons */
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* once again we're going to apply object-oriented principles, and we're going to define separate skins for these icons */
+.icon--primary {
+    fill: var(--color-primary);
+}
+
+.icon-container {  /* this is an entirely new class (notice no double hypher), and in BEM we use a single hyphen to separate multiple words */
+    background: #f3f9fa;
+    width: 64px;  /* using pixel values here bc if you look at our mobile & desktop designs our our icons are always the same size - they don't change relative to the screen or the font size ~ hence why we use an abolute unit here */
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;    /* align along primary axis (which by default is the horizontal axis) */
+    align-items: center;        /* align along secondary axis (which by default is the vertical axis) */
+}
