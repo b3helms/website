@@ -96,7 +96,8 @@ a {
 
 /* Badges */
 
-.badge {                    /* define badge structure */
+/* define badge structure (object-oriented css) */
+.badge {
     border-radius: 20px;
     font-size: 2rem;
     font-weight: 600;
@@ -104,12 +105,14 @@ a {
     white-space: nowrap;    /* prevent badge from wrapping into a 2nd line (particularly important when we have limited space) */
 }
 
-.badge--primary {           /* define badge skin */
+/* define badge skin (object-oriented css) */
+.badge--primary {           /* BEM convention; separating block from a modifier using double hyphen */
     background: var(--color-primary);
     color: #fff;
 }
 
-.badge--secondary {         /* define badge skin */
+/* define badge skin (object-oriented css) */
+.badge--secondary {             /* BEM convention; separating block from a modifier using double hyphen */
     background: var(--color-secondary);
     color: #fff;
 }
@@ -125,5 +128,37 @@ a {
 
     .badge--small {
         font-size: 1.2rem;
+    }
+}
+
+
+/* Lists */
+
+/* define list structure (object-oriented css) */
+.list {
+    list-style: none;       /* get rid of default bullet point */
+    padding-left: 0;        /* get rid of left padding that all browswers apply by default */
+    color: var(--color-headings);
+}
+
+/* define list skin (object-oriented css) */
+.list--inline .list__item {     /* BEM convention; separating block from a modifier using double hyphen */
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list--tick {
+    list-style-image: url(../images/tick.svg);
+    padding-left: 3rem;
+}
+
+.list--tick .list__item {  /* this is a good case of when you'd use nesting (cannot remove .list--tick without adverse affect) */
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .list--tick .list__item {
+        padding-left: 0;
     }
 }
