@@ -8,29 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- zen coding: type '.callout.callout--primary' then tab -->
-    <div class="callout callout--primary">
-      <!-- '.grid.grid--1x2' -->
-      <div class="grid grid--1x2">
-        <!-- '.callout__content' -->
-        <div class="callout__content">
-          <h2 class="callout__heading">Ready to Get Started?</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
-            ex enim in est quia explicabo rerum temporibus accusamus
-            perspiciatis dolorem?
-          </p>
-        </div>
-        <!-- 'a.btn.btn--secondary' -->
-        <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
+    <!-- zen coding: type '.collapsible' then tab -->
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item 1</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <!-- need to use sprite.svg Mosh provided in this lesson, otherwise chevron render properly -->
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <!-- '.collapsible__content' -->
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis,
+          saepe.
+        </p>
       </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
